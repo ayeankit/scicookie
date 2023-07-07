@@ -1,10 +1,9 @@
 [build-system]
-requires = ["flit_core >=3.4"]
-build-backend = "flit_core.buildapi"
-
+requires = ["hatchling>=1.17.1", "hatch-vcs>=0.3.0"]
+build-backend = "hatchling.build"
 
 [project]
-name = "{{ cookiecutter.project_slug }}"
+name = "{{ cookiecutter.project_name }}"
 authors = [
   { name = "{{ cookiecutter.author_full_name }}", email = "{{ cookiecutter.author_email }}" },
 ]
@@ -38,6 +37,21 @@ classifiers = [
 dynamic = ["version"]
 requires-python = ">=3.8.1"
 dependencies = [
+    "urllib3 =< 2",
+    "click>=8.0.3",
+    "hatchling>=1.14.0",
+    "httpx>=0.22.0",
+    "hyperlink>=21.0.0",
+    "keyring>=23.5.0",
+    "packaging>=21.3",
+    "pexpect~=4.8",
+    "platformdirs>=2.5.0",
+    "rich>=11.2.0",
+    "shellingham>=1.4.0",
+    "tomli-w>=1.0",
+    "tomlkit>=0.11.1",
+    "userpath~=1.7",
+    "virtualenv>=20.16.2",
 {# keep this line here #}
 {%- if cookiecutter.use_pytest == "yes" -%}
     "pytest >= 7.3.2",
@@ -88,9 +102,7 @@ hypothesis = "^6.0"
 # if you want to use docker-compose from your system, remove compose-go here
     "compose-go >= 2.18.1",
 {% endif %}
-    "ipython < 8",
-    "ipykernel >=6.0.0",
-{%- if cookiecutter.documentation_engine == 'mkdocs' %}
+{%- if cookiecutter.documentation_engine == 'mkdocs' -%}
     "Jinja2 >= 3.1.2",
     "mkdocs >= 1.4.3",
     "mkdocs-exclude >= 1.0.2",

@@ -27,8 +27,7 @@ for a Python package.
   - CI with github actions
   - Release workflow with semantic release and github actions
   - Flexible build system selection: Choose between popular build systems like
-      [Poetry](https://python-poetry.org/) or [Flit](https://flit.pypa.io) based
-      on your preference.
+      [Poetry](https://python-poetry.org/), [Flit](https://flit.pypa.io) and [Hatchling](https://hatch.pypa.io) based on your preference.
   - The structure of the project can use the *src layout* or *flat
   layout*. The “src layout” moving the code that is intended to be
   importable into a subdirectory. This subdirectory is typically named

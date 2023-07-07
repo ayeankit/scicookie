@@ -45,7 +45,8 @@
   ],
   "build_system": [
     "poetry",
-    "flit"
+    "flit",
+    "hatchling"
   ],
   "use_bandit": "yes",
   "use_black": "no",

@@ -6,6 +6,8 @@ dependencies:
   - python <3.11
 {%- if cookiecutter.build_system == 'poetry' %}
   - poetry
+{%- elif cookiecutter.build_system == 'hatchling' %}
+  - hatchling  
 {%- else %}
   - flit
 {%- endif %}

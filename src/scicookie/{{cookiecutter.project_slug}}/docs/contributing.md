@@ -28,6 +28,8 @@ packages to PyPI. Flit handles the packaging, distribution, and installation of
 Python packages, making it easier for us to share our code with others. It also
 includes features such as dependency management, versioning, and metadata
 management.
+{%- elif cookiecutter.build_system == "hatchling" -%}
+[Hatchling](https://hatch.pypa.io): It's a Python Package that is compatible build backend used by Hatch, a modern, extensible Python project manager. It provides a standardized build system with reproducible builds by default, robust environment management with support for custom scripts, easy publishing to PyPI or other indexes, version management, and configurable project generation with sane defaults.Hatchling might support multiple programming languages and offer language-specific options for building projects in different languages. It could also provide customization and extensibility options, allowing you to incorporate plugins or scripts for tailored build processes.
 
 {%- endif %}
 
